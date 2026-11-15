@@ -1,0 +1,41 @@
+# ELYZARETH OS — FROZEN STRUCTURAL MANIFEST (.yml)
+# Reference: ELYZARETH_OS_STRUCTURE_1.0
+# Phase: STRUCTURAL FREEZE
+# Authority: Student-Director / Human Creator
+
+project:
+  name: "ELYZARETH OS"
+  version: "1.0-structure-freeze"
+  reference: "ELYZARETH_OS_STRUCTURE_1.0"
+  phase: "STRUCTURAL_FREEZE"
+  authority: "Student-Director / Human Creator"
+  public_apk:
+    primary: "public/elyzareth-os-structure-v1.0.apk"
+    debug_alias: "public/app-debug.apk"
+  github_workflows:
+    yml: ".github/workflows/main.yml"
+    yaml: ".github/workflows/elyzareth-structure-freeze.yaml"
+
+pending_architectural_decisions:
+  - id: "ARCH-DEC-01"
+    topic: "Duplicate Creative Factory paths"
+    paths:
+      - "creative/creative-factory/"
+      - "creative-factory/"
+    status: "DECISION_REQUIRED"
+  - id: "ARCH-DEC-02"
+    topic: "Relationship between top-level foundation/, kernel/, shared/ and :core Gradle modules"
+    paths:
+      - "core/foundation vs foundation/"
+      - "core/kernel vs kernel/"
+      - "core/shared vs shared/"
+    status: "DECISION_REQUIRED"
+
+status_summary:
+  major_branch_hierarchy: "STRUCTURE_CREATED"
+  sub_branch_hierarchy: "STRUCTURE_CREATED"
+  existing_source_preservation: "PRESERVED"
+  duplicate_factory_path: "DECISION_REQUIRED"
+  core_top_level_relationship: "DECISION_REQUIRED"
+  functional_implementation: "NOT_AUTHORIZED_IN_FREEZE_PHASE"
+  structural_baseline: "FROZEN"
